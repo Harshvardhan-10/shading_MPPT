@@ -1,14 +1,23 @@
 % MPPT Initialization Sweep Script
 clear; clc; close all;
 
-irr = 1000; % W/m2
+irr_init_1 = 1000; % W/m2
+irr_final_1 = 1000;
+irr_init_2 = 1000;
+irr_final_2 = 1000;
+irr_init_3 = 1000;
+irr_final_3 = 1000;
+irr_init_4 = 1000;
+irr_final_4 = 1000;
+irr_init_5 = 1000;
+irr_final_5 = 1000;
 temp = 25;
 sample_time_FLC = 0.005;
 sample_time_mv_avg = 1e-4;
 
 % --- Configuration ---
 % Replace with your exact Simulink model name (without .slx)
-modelName = 'Shading_Fuzzy_single_phase_inverter'; 
+modelName = 'flc_master'; 
 
 % Array of initial duty cycles to test (from near-open to near-short circuit)
 init_duty_array = [0.1, 0.3, 0.5, 0.7, 0.9];

@@ -1,9 +1,0 @@
-irr_1 = 1000; % W/m2
-irr_2 = 0.8*irr_1;
-irr_3 = 0.6*irr_1;
-irr_4 = 0.4*irr_1;
-irr_5 = 0.2*irr_1;
-temp = 25;
-sample_time_FLC = 0.005;
-sample_time_mv_avg = 1e-4;
-init_duty = 0.5;
