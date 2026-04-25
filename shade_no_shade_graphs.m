@@ -50,12 +50,11 @@ if isa(V2,'timeseries'); Vvec2 = V2.Data; else Vvec2 = V2; end
 if size(Vvec1,2)>1 && all(diff(Vvec1(:,1))>=0); Vplot1 = Vvec1(:,2); else Vplot1 = Vvec1(:); end
 if size(Vvec2,2)>1 && all(diff(Vvec2(:,1))>=0); Vplot2 = Vvec2(:,2); else Vplot2 = Vvec2(:); end
 
-% ... (Keep everything above this the same, down to the Pplot/Iplot extraction)
 Pplot1 = Pvec1(:); Iplot1 = Ivec1(:);
 Pplot2 = Pvec2(:); Iplot2 = Ivec2(:);
 
-% --- THE FIX: Filter out mathematical spikes and negative power ---
-% Keep only data where Current is between 0A (Voc) and 10A (Safe Isc margin)
+% ---Filter out mathematical spikes and negative power ---
+% Keep only data where Current is between 0A (Voc) and 10A
 valid1 = (Iplot1 >= 0) & (Iplot1 <= 10);
 Vplot1 = Vplot1(valid1);
 Iplot1 = Iplot1(valid1);

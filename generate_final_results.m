@@ -1,7 +1,5 @@
 % =========================================================================
-% MASTER REPORT GENERATOR
-% Fulfills IIT Bombay DESE Guidelines for Reproducibility
-% Generates all Data Tables and Thesis Figures for MPPT Analysis
+% Generates all Data Tables and Figures for MPPT Analysis
 % =========================================================================
 clc; clear; close all;
 
@@ -168,7 +166,7 @@ for i = 1:length(models_all)
 end
 
 disp('==============================================================');
-disp('PART 2: GENERATING THESIS FIGURES');
+disp('PART 2: GENERATING FIGURES');
 disp('==============================================================');
 
 % Common Plot Settings
@@ -248,4 +246,4 @@ disp(struct2table(results_STC));
 disp('================================ DYNAMIC CONDITIONS (PSC) ===============================');
 disp(struct2table(results_Dynamic));
 disp('=========================================================================================');
-disp('Script execution complete. You may now export the figures for your report.');
+disp('Script execution complete.');
